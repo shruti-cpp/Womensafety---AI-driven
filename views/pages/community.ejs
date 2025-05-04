@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community</title>
+    <link rel="stylesheet" href="style_community.css">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background: linear-gradient(to bottom, #2e2e2e, #000);
+            color: #ffffff;
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+        }
+        .btn-glow {
+            background: linear-gradient(45deg, #ff7e5f, #feb47b);
+            transition: all 0.3s;
+        }
+        .btn-glow:hover {
+            box-shadow: 0 0 15px #ff7e5f;
+        }
+    </style>
+</head>
+<body>
+    <%- include('../includes/navbar') %>
+
+    <div class="container mx-auto px-4 py-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="card rounded-lg shadow-md p-6">
+                <h2 class="text-2xl font-semibold mb-4">Help Us Make A Difference Today</h2>
+                <p class="mb-4">Your contribution can make a difference in empowering women.</p>
+                <a href="/donation" class="block w-full btn-glow text-white font-bold py-2 px-4 rounded text-center">
+                    Donate Now
+                </a>
+            </div>
+            <div class="card rounded-lg shadow-md p-6">
+                <h2 class="text-2xl font-semibold mb-4">Share Your Story</h2>
+                <p class="mb-4">Inspire others by sharing your experiences or creative works.</p>
+                <a href="/submit-story" class="block w-full btn-glow text-white font-bold py-2 px-4 rounded text-center">
+                    Submit Your Story
+                </a>
+            </div>
+        </div>
+
+        <section class="mt-12">
+            <h2 class="text-3xl font-bold text-center mb-8">Inspiring Stories</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="card rounded-lg shadow-md p-6">
+                    <h3 class="text-xl font-semibold mb-2">Breaking Barriers in STEM</h3>
+                    <p class="mb-2">By Sarah Johnson</p>
+                    <p>Sarah grew up in a small village... proving that with determination, any dream is achievable.</p>
+                </div>
+                <div class="card rounded-lg shadow-md p-6">
+                    <h3 class="text-xl font-semibold mb-2">Empowering Through Education</h3>
+                    <p class="mb-2">By Maria Rodriguez</p>
+                    <p>Maria witnessed firsthand the transformative power of education... changing individual lives.</p>
+                </div>
+                <div class="card rounded-lg shadow-md p-6">
+                    <h3 class="text-xl font-semibold mb-2">Rising from Adversity</h3>
+                    <p class="mb-2">By Amina Khalid</p>
+                    <p>Amina's story is one of resilience... inspiring many women to seek help.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <section class="mt-12">
+        <h2 class="text-3xl font-bold text-center mb-8">Work and Volunteer Opportunities</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="card rounded-lg shadow-md p-6">
+                <h4 class="text-xl font-semibold mb-2">Freelancing</h4>
+                <p>Learn how to start and succeed in freelancing.</p>
+                <a href="#" class="text-indigo-400 hover:text-indigo-600">Watch Tutorial</a>
+            </div>
+            <div class="card rounded-lg shadow-md p-6">
+                <h4 class="text-xl font-semibold mb-2">Web Development</h4>
+                <p>Master the basics of web development.</p>
+                <a href="#" class="text-indigo-400 hover:text-indigo-600">Watch Tutorial</a>
+            </div>
+            <div class="card rounded-lg shadow-md p-6">
+                <h4 class="text-xl font-semibold mb-2">Digital Marketing</h4>
+                <p>Learn essential digital marketing strategies.</p>
+                <a href="#" class="text-indigo-400 hover:text-indigo-600">Watch Tutorial</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="card rounded-lg shadow-md p-6 mt-8">
+        <h2 class="text-2xl font-semibold mb-4">Job Opportunities</h2>
+        <p class="mb-4">Explore and apply for exciting job opportunities.</p>
+        <a href="/job-application" class="block w-full btn-glow text-white font-bold py-2 px-4 rounded text-center">
+            Apply Now
+        </a>
+    </div>
+
+    <section class="mt-12 bg-gradient-to-r from-orange-500 to-red-600 p-8 rounded-lg">
+        <div class="max-w-3xl mx-auto text-white">
+            <h2 class="text-3xl font-bold text-center mb-4">BE PART OF OUR COMMUNITY</h2>
+            <p class="text-center mb-6">Receive the latest news on events, upcoming webinars, and small business resources.</p>
+            <form class="space-y-4">
+                <input type="email" placeholder="Enter your e-mail address" class="w-full p-2 rounded text-black" required>
+                <div class="flex items-center">
+                    <input type="checkbox" id="privacy-policy" class="mr-2" required>
+                    <label for="privacy-policy" class="text-sm">By subscribing, I accept the terms of the <a href="#" class="underline">Privacy Policy.</a></label>
+                </div>
+                <button type="submit" class="bg-white text-orange-600 font-bold py-2 px-4 rounded w-full hover:bg-orange-400">
+                    SUBMIT
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <%- include('../includes/footer') %>
+</body>
+</html>
